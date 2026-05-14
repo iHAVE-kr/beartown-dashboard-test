@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://www.beartown.kr; style-src 'self' 'unsafe-inline';" />
+  <title>BearTown Dashboard Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 커스텀 타이틀바 -->
+  <div class="titlebar" id="titlebar">
+    <div class="titlebar-left">
+      <img src="https://www.beartown.kr/images/title_v2.png" alt="BearTown" class="titlebar-logo" />
+      <span class="titlebar-text">BearTown Dashboard Test</span>
+    </div>
+    <div class="titlebar-controls">
+      <button id="btn-minimize" class="titlebar-btn" title="최소화">&#x2013;</button>
+      <button id="btn-maximize" class="titlebar-btn" title="최대화">&#x25A1;</button>
+      <button id="btn-close" class="titlebar-btn btn-close" title="닫기">&#x2715;</button>
+    </div>
+  </div>
+
+  <!-- 메인 컨텐츠 -->
+  <div class="content">
+    <!-- 헤더 -->
+    <header class="header">
+      <img src="https://www.beartown.kr/images/title_v2.png" alt="BearTown Logo" class="logo" />
+      <div class="header-info">
+        <h1>BearTown Dashboard</h1>
+        <span class="version-badge" id="version-badge">v-</span>
+      </div>
+    </header>
+
+    <!-- 카드 그리드 -->
+    <div class="card-grid">
+
+      <!-- 업데이트 카드 -->
+      <div class="card card-update">
+        <div class="card-header">
+          <span class="card-icon">&#x21BB;</span>
+          <h2>앱 업데이트</h2>
+        </div>
+        <div class="card-body">
+          <p class="update-message" id="update-message">업데이트 상태를 확인하세요.</p>
+          <div class="progress-bar-container" id="progress-container" style="display:none;">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+          <div class="update-actions">
+            <button class="btn btn-primary" id="btn-check-update">업데이트 확인</button>
+            <button class="btn btn-success" id="btn-download-update" style="display:none;">다운로드</button>
+            <button class="btn btn-accent" id="btn-install-update" style="display:none;">설치 및 재시작</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 시스템 정보 카드 -->
+      <div class="card card-info">
+        <div class="card-header">
+          <span class="card-icon">&#x2139;</span>
+          <h2>시스템 정보</h2>
+        </div>
+        <div class="card-body">
+          <div class="info-row">
+            <span class="info-label">플랫폼</span>
+            <span class="info-value" id="info-platform">-</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">아키텍처</span>
+            <span class="info-value" id="info-arch">-</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">앱 버전</span>
+            <span class="info-value" id="info-version">-</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">현재 시각</span>
+            <span class="info-value" id="info-time">-</span>
+          </div>
+          <button class="btn btn-secondary" id="btn-refresh-info">새로고침</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+      <span>&copy; 2025 BearTown. Test Application.</span>
+    </footer>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
