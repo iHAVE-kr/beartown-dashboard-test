@@ -175,6 +175,32 @@ body {
   color: var(--text-dim);
   min-height: 20px;
   line-height: 1.5;
+  font-weight: 600;
+}
+
+.update-message.status-latest {
+  color: #34d399;
+}
+
+.update-message.status-outdated {
+  color: #ef4444;
+}
+
+.update-message.status-downloading {
+  color: var(--primary);
+}
+
+.update-message.status-downloaded {
+  color: var(--accent);
+}
+
+.update-message.status-error {
+  color: var(--text-dim);
+}
+
+.update-message.status-checking {
+  color: var(--text-dim);
+  font-weight: 400;
 }
 
 .update-actions {
